@@ -46,11 +46,35 @@ ul{
 	min-height: 100vh;
 	display: block;
 	padding: 0 30px;
+	position: fixed;
 	opacity: 1;
 	left: 270px;
-	/* top: 0;
-	right: 0; 
-	z-index: 0; */
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 0;
+	overflow-y: auto;
+	overflow-x: hidden;
+	transition: .3s;
+}
+.section.back__section 
+{
+	z-index: 1;
+}
+.section.acctive {
+	z-index: 2;
+	opacity: 1;
+	animation: sideSection 1s ease;
+}
+@keyframes sideSection {
+	0%
+	{
+		transform: translateX(100%);
+	}
+	100%
+	{
+		transform: translateX(0%);
+	}
 }
 .padd-15{
 	padding-left: 15px;
@@ -60,9 +84,6 @@ ul{
 }
 .hidden {
 	display: none !important;
-}
-.main__content{
-	padding-left: 270px;
 }
 .container{
 	width: 1500px;
@@ -153,6 +174,7 @@ ul{
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	transition: .5s;
 }
 
 .aside .logo {
@@ -208,6 +230,7 @@ ul{
 	display: none;
 	align-items: center;
 	justify-content: center;
+	transition: .3s;
 }
 .aside .nav__toggler span {
 	height: 2px;
@@ -216,6 +239,19 @@ ul{
 	display: inline-block;
 	position: relative;
 }
+.aside .nav__toggler.open span 
+{
+	background: transparent;
+} 
+.aside .nav__toggler.open span::before{
+	transform: rotate(45deg);
+	top: 0;
+}
+.aside .nav__toggler.open span::after{
+	transform: rotate(-45deg);
+	top: 0;
+}
+
 .aside .nav__toggler span::before{
 	content: '';
 	height: 2px;
@@ -369,8 +405,8 @@ h2.hello span {
 }
 
 .personal__info{
-	flex: 0 0 60%;
-	max-width: 60%;
+	flex: 0 0 100%;
+	max-width: 100%;
 	margin-top: 40px;
 }
 .info__item{
@@ -391,7 +427,7 @@ h2.hello span {
 	display: inline-block;
 }
 .buttons {
-	margin-top: 30px;
+	margin-top: 50px;
 }
 
 
@@ -414,7 +450,9 @@ h2.hello span {
 	text-transform: capitalize;
 	margin-top: 15px;
 }	
-
+.skill__percent{
+	color: var(--skin-color);
+}
 .progress{
 	width: 100%;
 	height: 7px;
@@ -621,8 +659,8 @@ h2.hello span {
 	font-size: 25px;
 }
 .contact__info-item{
-	flex:  0 0 33.33%;
-	min-width: 33.33%;
+	flex:  0 0 25%;
+	min-width: 25%;
 	text-align: center;
 }
 .icon__contact{
@@ -728,13 +766,26 @@ h2.hello span {
 		flex: 0 0 100%;
 		max-width: 100%;
 	}
-	.aside {
-		width: 170px;
-	}
-	.main__content{
-		padding-left: 170px;
-	}	
 	
+	.aside.open {
+		left: 70px;
+	}
+	.aside {
+		left: -270px;
+	}
+	.aside .nav__toggler {
+		display: flex;
+		left: 30px;
+	}	
+	.aside .nav__toggler.open {
+		left: 300px;
+	}
+	.section{
+		left: 0;
+	}
+	.section.open{
+		left: 470px;
+	}
 	.about .about__content .personal__info .info__item p span {
 		display: block;
 		margin-left: 0;
@@ -758,26 +809,26 @@ h2.hello span {
 	}
 	.about__content .row {
 		display: block;
-		width: 700px;
+		/* width: 700px; */
 	}
 	.personal__info .row {
 		display: flex;	
 		justify-content: space-evenly;
 	}
-	.home__img {
+	/* .home__img {
 		margin-left: 50px;
 		margin-top: 70px;
 		
-	}
-	.home__img img {
+	} */
+	/* .home__img img {
 		height: 400px;
 		width: 300px;	
-	}
-	.skills .row {
+	} */
+	/* .skills .row {
 		width: 700px;
 		display: flexbox;	
 		justify-content: space-between;
-	}
+	} */
 	.home__info {
 		flex:  0 0 100%;
 		max-width: 100%;
@@ -806,10 +857,10 @@ h2.hello span {
 	.aside {
 		left: -270px;
 	}
-	.main__content{
+	/* .main__content{
 		padding-left: 0px;
 		max-width: 100%;
-	}	
+	}	 */
     .home__info {
 		height: 400px;
 		width: 400px;
