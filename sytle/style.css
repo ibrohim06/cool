@@ -11,6 +11,13 @@
 	--text-black-900: #302e70;
 	--text-black-700: #504e70;
 }
+body.dark {
+	--bg-black-900: #151515;
+	--bg-black-100: #222222;
+	--bg-black-50: #393939;
+	--text-black-900: #ffffff;
+	--text-black-700: #e9e9e9;
+}
 
 body
 {
@@ -475,6 +482,19 @@ h2.hello span {
 	width: 15px;
 	border-radius: 50%;
 	background: var(--skin-color);
+}
+
+.fa-calendar {
+	color: var(--skin-color);
+}
+.timeline__title{
+	color: var(--text-black-700);
+}
+.timeline__text{
+	color: var(--text-black-900);
+	font-family: 'Chakra Petch', sans-serif;
+	font-weight: 400;
+	font-size: 16px;
 }
 
 

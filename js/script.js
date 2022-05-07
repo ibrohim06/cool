@@ -37,3 +37,8 @@ function getRandomInt(max) {
 setTimeout(typeText, 4000)
 
 
+// ********************************
+
+// var typed = new Typed(".typing", {
+//     strings:
+// })
