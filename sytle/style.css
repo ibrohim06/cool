@@ -196,6 +196,15 @@ ul{
 {
 	font-family: 'Clicker Script', cursive;
 	font-family: 40px;
+	position: relative;
+}
+.aside .logo a img {
+	width: 150px;
+	height: 150px;
+	position: relative;
+	top: 0;
+	right: 0;
+	z-index: 55555;
 }
 .aside .logo a::before{
 	content: '';
@@ -204,8 +213,8 @@ ul{
 	height: 20px;
 	border-bottom: 5px solid var(--skin-color);
 	border-left: 5px solid var(--skin-color);
-	bottom: 0;
-	left: 0;
+	bottom: 45px;
+	left: 25px;
 }
 .aside .logo a::after{
 	content: '';
@@ -214,8 +223,8 @@ ul{
 	height: 20px;
 	border-top: 5px solid var(--skin-color);
 	border-right: 5px solid var(--skin-color);
-	top: 0;
-	right: 0;
+	top: -110px;
+	right: 25px;
 }
 .aside .nav__toggler {
 	height: 40px;
@@ -362,7 +371,7 @@ h2.hello span {
 	width: 80px;
 	border-bottom: 10px solid var(--skin-color);
 	border-right: 10px solid var(--skin-color);
-	right: -20px;
+	right: -10px;
 	bottom: -40px;
 	border-radius: 10px 5px ;
 
@@ -582,12 +591,15 @@ h2.hello span {
 	background: var(--bg-black-100);
 	border: 1px solid var(--bg-black-50);
 	border-radius: 10px;
-	padding:  30px 15px;
+	padding:  30px 100px;
 	text-align: center;
 	transition: .3s;
 }
 .service__item-inner:hover{
 	box-shadow: 0 0 20px rgba(48, 46, 77, 0.26);
+}
+.service__item-inner p {
+	width: 120px;
 }
 .icon {
 	height: 60px;
@@ -754,7 +766,6 @@ h2.hello span {
 }
 
 .media688{
-	margin-left: 150px;
 	column-gap: 50px;
 }
 
@@ -782,7 +793,7 @@ h2.hello span {
 		max-width: 75%;
 	}
 	.media688{
-		margin-left: 150px;
+		/* margin-left: 150px; */
 		column-gap: 50px;
 	}
 	
@@ -882,6 +893,7 @@ h2.hello span {
 	.bite {
 		margin-left: 50px;
 	}
+	
 	
 }
 
